@@ -3,8 +3,6 @@ from http import HTTPStatus
 from flask import Blueprint
 from flask.views import MethodView
 
-proxy_bp: Blueprint = Blueprint('proxy', __name__, url_prefix='/api/proxy')
-
 class ProxyPass(MethodView):
     def get(self) -> tuple:
         return 'GET_ok', HTTPStatus.OK
